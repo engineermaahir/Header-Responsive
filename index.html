@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="tailwind.config.js">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+    <div class="flex  justify-between items-center p-5 ">
+      <h1 class="text-4xl font-bold text-red-400 pl-4">Lg</h1>
+      <div class="sm:flex  items-center gap-10 hidden">
+        <a href="" class="text-xl font-semibold text-blue-900 ">Home</a>
+        <a href="" class="text-xl font-semibold text-blue-900 ">About Us</a>
+        <a href="" class="text-xl font-semibold text-blue-900 ">Contact Us</a>
+      </div>
+      <div class="sm:flex flex-none  items-center gap-5 hidden">
+        <button class="text-white py-3 px-8 bg-blue-800 rounded-lg">LogIn</button>
+        <button class="text-blue-700 py-3 font-semibold px-8 border-2 border-blue-600 rounded-lg">LogIn</button>
+      </div>
+      <i id="bars" class="fa-solid fa-bars sm:hidden block text-4xl"></i>
+      <i id="xmark" class="fa-solid fa-xmark text-4xl hidden"></i>
+    </div>
+    <div id="menu" class="sm:hidden bg-cyan-200 pb-3 hidden justify-center ">
+      <ul class="sm:hidden flex-col w-full  items-center justify-center gap-10 space-y-2 pb-3 pl-40">
+        <li class="text-xl font-semibold text-blue-900 ">Home</li>
+        <li class="text-xl font-semibold text-blue-900 ">About Us</li>
+        <li class="text-xl font-semibold text-blue-900 ">Contact Us</li>
+      </ul>
+      <div class="sm:hidden  flex-col  items-center space-y-3 pl-40">
+        <button class="text-white py-3 px-8 bg-blue-800 rounded-lg">LogIn</button> 
+        <button class="text-blue-700 py-3 font-semibold px-8 border-2 border-blue-600 rounded-lg">LogIn</button>
+      </div>
+    </div>
+  </header>
+
+  <script>
+    let bars = document.querySelector("#bars")
+    let menu = document.querySelector("#menu")
+
+    const hiddenMenu = () =>{
+      menu.style.dsplay = 'none';
+    }
+    bars.addEventListener('click', ()=> {
+      menu.style.display = 'block'
+      bars.style.display = 'none'
+      xmark.style.display = 'block'
+    })
+    xmark.addEventListener('click', () => {
+      menu.style.display = 'none'
+      bars.style.display = 'block'
+      xmark.style.display = 'none'
+    })
+  </script>
+</body>
+</html>
